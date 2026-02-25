@@ -2,7 +2,6 @@ package az.edu.ada.wm2.lab4.repository;
 
 
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 import az.edu.ada.wm2.lab4.model.Product;
 import org.springframework.stereotype.Repository;
 
@@ -35,6 +34,7 @@ public class ProductRepositoryImpl implements ProductRepository {
     public List<Product> findAll() {
         return new ArrayList<>(storage.values());
     }
+
     @Override
     public void deleteById(UUID id) {
         storage.remove(id);
